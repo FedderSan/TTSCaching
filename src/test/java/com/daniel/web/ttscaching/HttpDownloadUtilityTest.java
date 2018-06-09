@@ -30,13 +30,7 @@ public class HttpDownloadUtilityTest {
     
     @BeforeClass
     public static void setUpClass() {
-        try
-        {
-            HttpDownloadUtility tester = new HttpDownloadUtility();
-        }
-         catch (IOException ex) {
-            Logger.getLogger(TTSCaching.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+     
     }
     
     @AfterClass
@@ -50,10 +44,18 @@ public class HttpDownloadUtilityTest {
     @After
     public void tearDown() {
     }
+ 
+
+    /**
+     * Test of downloadFile method, of class HttpDownloadUtility.
+     */
     @Test
-    public void DwlFile()
-    {
-        
-        assert.equals(this)
+    public void testDownloadFile() throws Exception {
+        System.out.println("downloadFile");
+        String fileURL = "https://jdbc.postgresql.org/download/postgresql-42.2.2.jar";
+        String saveDir = "C:\\temp\\";
+        HttpDownloadUtility.downloadFile(fileURL, saveDir);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 }
