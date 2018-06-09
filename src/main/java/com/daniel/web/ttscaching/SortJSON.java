@@ -5,6 +5,7 @@
  */
 package com.daniel.web.ttscaching;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -45,7 +46,7 @@ public class SortJSON {
          s = "[5,,2]";
          obj = parser.parse(s);
          System.out.println(obj);
-      }catch(ParseException pe){
+      } catch(ParseException pe){
 		
          System.out.println("position: " + pe.getPosition());
          System.out.println(pe);
